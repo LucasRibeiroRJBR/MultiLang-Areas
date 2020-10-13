@@ -9,7 +9,7 @@ Programa que calcula áreas geométricas, traduzido em vários idiomas.
 |Coreano|✅|Japonês|✅|
 |Espanhol|✅|Português|✅|
 |Francês|✅|Mandarim|❌|
-
+|Hebraico|❌|Russo|❌|
 ---
 
 >Créditos  
