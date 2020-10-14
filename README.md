@@ -13,7 +13,7 @@ Programa que calcula áreas geométricas, traduzido em vários idiomas.
 ---
 >ScreenShots  
 
-**Tela Inicial**
+**Tela Inicial**  
 ![](https://snipboard.io/pejWuE.jpg)
 
 **Telas do programa em todos os idiomas**
