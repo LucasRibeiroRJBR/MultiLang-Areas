@@ -1736,7 +1736,6 @@ def chama_ch():
     root_ch.mainloop()
 
 
-
 def chama_he():
     root.destroy()
 
@@ -1910,6 +1909,179 @@ def chama_he():
     root_he.mainloop()
 
 
+def chama_ru():
+    root.destroy()
+
+    def calcular_quadrado():
+        try:
+            rep = int(q.get())**2
+            resultado_quadrado.configure(text=rep)
+        except:
+            resultado_quadrado.configure(text='Неверные значения!')
+
+    def calcular_triangulo():
+        try:
+            baseVar = int(t_base.get())
+            alturaVar = int(t_altura.get())
+            rep = str((baseVar * alturaVar)/2)
+            resultado_triangulo.configure(text=rep)
+        except:
+            resultado_triangulo.configure(text='Неверные значения!')
+
+    def calcular_circulo():
+        try:
+            raioVar = int(c.get())
+            piVar = math.pi
+            rep = str(raioVar * piVar)
+            resultado_circulo.configure(text=rep)
+        except:
+            resultado_circulo.configure(text='Неверные значения!')
+
+    def calcular_retangulo():
+        try:
+            baseVar = int(r_base.get())
+            alturaVar = int(r_altura.get())
+            rep = str(baseVar * alturaVar)
+            resultado_retangulo.configure(text=rep)
+        except:
+            resultado_retangulo.configure(text='Неверные значения!')
+
+    root_ru = Tk()
+    root_ru.title('Расчет площадей')
+    root_ru.resizable(False, False)
+
+    style = ThemedStyle(root_ru)
+    style.set_theme('breeze')
+
+    largura_medida_janela = 460
+    altura_medida_janela = 420
+
+    largura_janela = root_ru.winfo_screenwidth()
+    altura_janela = root_ru.winfo_screenheight()
+    x = int((largura_janela/2) - (largura_medida_janela/2))
+    y = int((altura_janela/2) - (altura_medida_janela/2))
+    root_ru.geometry(f'{largura_medida_janela}x{altura_medida_janela}+{x}+{y}')
+
+    # FRAMES
+    quadrado = ttk.LabelFrame(root_ru, text='Квадрат', width=220, height=190)
+    quadrado.grid(row=1, column=0, padx=5)
+    triangulo = ttk.LabelFrame(root_ru, text='Треугольник', width=220, height=190)
+    triangulo.grid(row=1, column=1, padx=5)
+    circulo = ttk.LabelFrame(root_ru, text='Круг', width=220, height=190)
+    circulo.grid(row=2, column=0, padx=5, pady=5)
+    retangulo = ttk.LabelFrame(
+        root_ru, text='Прямоугольник', width=220, height=190)
+    retangulo.grid(row=2, column=1, padx=5, pady=5)
+
+    quadrado.grid_propagate(False)
+    triangulo.grid_propagate(False)
+    circulo.grid_propagate(False)
+    retangulo.grid_propagate(False)
+
+    root_ru = Label(root_ru, text='Расчет площадей',
+                    font=('Arial', 16, 'bold'))
+    root_ru.grid(row=0, columnspan=2)
+
+    # QUADRADO
+    quadrado_img = Image.open('IMGS/formas_geometricas/square.png')
+    quadrado_renderizado = ImageTk.PhotoImage(quadrado_img)
+    imagem_quadrado = Label(quadrado, image=quadrado_renderizado)
+    imagem_quadrado.grid(rowspan=2, column=0)
+
+    label_lado_quadrado = ttk.Label(quadrado, text='Сторона')
+    label_lado_quadrado.grid(row=0, column=1)
+
+    q = StringVar()
+
+    input_lado_quadrado = ttk.Entry(quadrado, textvariable=q, width=16)
+    input_lado_quadrado.grid(row=1, column=1)
+
+    botao_quadrado = ttk.Button(
+        quadrado, text='Вычислить', command=calcular_quadrado)
+    botao_quadrado.grid(row=2, columnspan=3, pady=5)
+
+    resultado_quadrado = ttk.Label(
+        quadrado, text='', font=('Arial', 16, 'bold'))
+    resultado_quadrado.grid(row=3, columnspan=3)
+
+    # TRIÂNGULO
+    triangulo_img = Image.open('IMGS/formas_geometricas/triangle-2.png')
+    triangulo_renderizado = ImageTk.PhotoImage(triangulo_img)
+    imagem_triangulo = Label(triangulo, image=triangulo_renderizado)
+    imagem_triangulo.grid(rowspan=4, column=0)
+
+    t_base = StringVar()
+    t_altura = StringVar()
+
+    label_base_triangulo = ttk.Label(triangulo, text='Основание')
+    label_base_triangulo.grid(row=0, column=1)
+    input_base_triangulo = ttk.Entry(triangulo, textvariable=t_base, width=16)
+    input_base_triangulo.grid(row=1, column=1)
+
+    label_altura_triangulo = ttk.Label(triangulo, text='Высота')
+    label_altura_triangulo.grid(row=2, column=1)
+    input_altura_triangulo = ttk.Entry(triangulo, textvariable=t_altura, width=16)
+    input_altura_triangulo.grid(row=3, column=1)
+
+    botao_triangulo = ttk.Button(
+        triangulo, text='Вычислить', command=calcular_triangulo)
+    botao_triangulo.grid(row=4, columnspan=3, pady=5)
+
+    resultado_triangulo = ttk.Label(
+        triangulo, text='', font=('Arial', 16, 'bold'))
+    resultado_triangulo.grid(row=5, columnspan=3)
+
+    # CIRCULO
+    circulo_img = Image.open('IMGS/formas_geometricas/circle.png')
+    circulo_renderizado = ImageTk.PhotoImage(circulo_img)
+    imagem_circulo = Label(circulo, image=circulo_renderizado)
+    imagem_circulo.grid(rowspan=2, column=0)
+
+    label_lado_circulo = ttk.Label(circulo, text='Радиус')
+    label_lado_circulo.grid(row=0, column=1)
+
+    c = StringVar()
+
+    input_lado_circulo = ttk.Entry(circulo, textvariable=c, width=16)
+    input_lado_circulo.grid(row=1, column=1)
+
+    botao_circulo = ttk.Button(
+        circulo, text='Вычислить', command=calcular_circulo)
+    botao_circulo.grid(row=2, columnspan=3, pady=5)
+
+    resultado_circulo = ttk.Label(circulo, text='', font=('Arial', 16, 'bold'))
+    resultado_circulo.grid(row=3, columnspan=3)
+
+    # RETÂNGULO
+    retangulo_img = Image.open('IMGS/formas_geometricas/rectangle.png')
+    retangulo_renderizado = ImageTk.PhotoImage(retangulo_img)
+    imagem_retangulo = Label(retangulo, image=retangulo_renderizado)
+    imagem_retangulo.grid(rowspan=4, column=0)
+
+    r_base = StringVar()
+    r_altura = StringVar()
+
+    label_base_retangulo = ttk.Label(retangulo, text='Основание')
+    label_base_retangulo.grid(row=0, column=1)
+    input_base_retangulo = ttk.Entry(retangulo, textvariable=r_base, width=16)
+    input_base_retangulo.grid(row=1, column=1)
+
+    label_altura_retangulo = ttk.Label(retangulo, text='Высота')
+    label_altura_retangulo.grid(row=2, column=1)
+    input_altura_retangulo = ttk.Entry(retangulo, textvariable=r_altura, width=16)
+    input_altura_retangulo.grid(row=3, column=1)
+
+    botao_retangulo = ttk.Button(
+        retangulo, text='Вычислить', command=calcular_retangulo)
+    botao_retangulo.grid(row=4, columnspan=3, pady=5)
+
+    resultado_retangulo = ttk.Label(
+        retangulo, text='', font=('Arial', 16, 'bold'))
+    resultado_retangulo.grid(row=5, columnspan=3)
+
+    root_ru.mainloop()
+
+
 root = Tk()
 root.title('MultiLang Areas')
 
@@ -2029,7 +2201,7 @@ botao_ch = ttk.Button(root,
 
 botao_ru = ttk.Button(root, 
                       text='Русский', 
-                      #command=chama_ru, 
+                      command=chama_ru, 
                       image=bt_img_ru,
                       compound="top", 
                       style='estilo_bt.TButton', 

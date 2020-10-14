@@ -11,10 +11,19 @@ Programa que calcula áreas geométricas, traduzido em vários idiomas.
 |Francês|✅|Mandarim|✅|
 |Hebraico|✅|Russo|✅|
 ---
+>ScreenShots  
 
+**Tela Inicial**
+![](https://snipboard.io/pejWuE.jpg)
+
+**Telas do programa em todos os idiomas**
+![](https://snipboard.io/Y14eAN.jpg)
+
+---
 >Créditos  
 
-Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>  
+Icons made by <a href="https://smashicons.com/" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 
 ---
 ## Lucas Ribeiro
