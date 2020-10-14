@@ -27,7 +27,6 @@ Icons made by <a href="https://smashicons.com/" title="Smashicons">Smashicons</a
 
 ---
 ## Lucas Ribeiro
-## Lucas Ribeiro
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/LucasRibeiroRJBR)](https://github.com/LucasRibeiroRJBR)
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucas-santos-ribeiro//)](https://www.linkedin.com/in/lucas-santos-ribeiro/)
 [![Twitter Badge](https://img.shields.io/badge/-Twitter-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/lucas_sanri)](https://twitter.com/lucas_sanri)
