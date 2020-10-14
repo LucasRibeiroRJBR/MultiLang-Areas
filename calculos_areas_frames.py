@@ -1736,6 +1736,7 @@ def chama_ch():
     root_ch.mainloop()
 
 
+
 def chama_he():
     root.destroy()
 
@@ -1744,7 +1745,7 @@ def chama_he():
             rep = int(q.get())**2
             resultado_quadrado.configure(text=rep)
         except:
-            resultado_quadrado.configure(text='قيمة غير صالحة!')
+            resultado_quadrado.configure(text='!ערך לא תקין')
 
     def calcular_triangulo():
         try:
@@ -1753,7 +1754,7 @@ def chama_he():
             rep = str((baseVar * alturaVar)/2)
             resultado_triangulo.configure(text=rep)
         except:
-            resultado_triangulo.configure(text='قيمة غير صالحة!')
+            resultado_triangulo.configure(text='!ערך לא תקין')
 
     def calcular_circulo():
         try:
@@ -1762,7 +1763,7 @@ def chama_he():
             rep = str(raioVar * piVar)
             resultado_circulo.configure(text=rep)
         except:
-            resultado_circulo.configure(text='قيمة غير صالحة!')
+            resultado_circulo.configure(text='!ערך לא תקין')
 
     def calcular_retangulo():
         try:
@@ -1771,10 +1772,10 @@ def chama_he():
             rep = str(baseVar * alturaVar)
             resultado_retangulo.configure(text=rep)
         except:
-            resultado_retangulo.configure(text='قيمة غير صالحة!')
+            resultado_retangulo.configure(text='!ערך לא תקין')
 
     root_he = Tk()
-    root_he.title('عملية حسابية شكل هندسي')
+    root_he.title('חישוב שטח גיאומטריים')
     root_he.resizable(False, False)
 
     style = ThemedStyle(root_he)
@@ -1805,7 +1806,7 @@ def chama_he():
     circulo.grid_propagate(False)
     retangulo.grid_propagate(False)
 
-    root_he = Label(root_he, text='عملية حسابية شكل هندسي',
+    root_he = Label(root_he, text='חישוב שטח גיאומטריים',
                     font=('Arial', 16, 'bold'))
     root_he.grid(row=0, columnspan=2)
 
@@ -1824,7 +1825,7 @@ def chama_he():
     input_lado_quadrado.grid(row=1, column=0)
 
     botao_quadrado = ttk.Button(
-        quadrado, text='احسب', command=calcular_quadrado)
+        quadrado, text='לחשב', command=calcular_quadrado)
     botao_quadrado.grid(row=2, columnspan=3, pady=5)
 
     resultado_quadrado = ttk.Label(
@@ -1840,18 +1841,18 @@ def chama_he():
     t_base = StringVar()
     t_altura = StringVar()
 
-    label_base_triangulo = ttk.Label(triangulo, text='القاعد')
+    label_base_triangulo = ttk.Label(triangulo, text='בסיס')
     label_base_triangulo.grid(row=0, column=0)
     input_base_triangulo = ttk.Entry(triangulo, textvariable=t_base, width=16)
     input_base_triangulo.grid(row=1, column=0)
 
-    label_altura_triangulo = ttk.Label(triangulo, text='الارتفاع')
+    label_altura_triangulo = ttk.Label(triangulo, text='גובה')
     label_altura_triangulo.grid(row=2, column=0)
     input_altura_triangulo = ttk.Entry(triangulo, textvariable=t_altura, width=16)
     input_altura_triangulo.grid(row=3, column=0)
 
     botao_triangulo = ttk.Button(
-        triangulo, text='احسب', command=calcular_triangulo)
+        triangulo, text='לחשב', command=calcular_triangulo)
     botao_triangulo.grid(row=4, columnspan=3, pady=5)
 
     resultado_triangulo = ttk.Label(
@@ -1864,7 +1865,7 @@ def chama_he():
     imagem_circulo = Label(circulo, image=circulo_renderizado)
     imagem_circulo.grid(rowspan=2, column=1)
 
-    label_lado_circulo = ttk.Label(circulo, text='مساحة نصف')
+    label_lado_circulo = ttk.Label(circulo, text='רדיוס')
     label_lado_circulo.grid(row=0, column=0)
 
     c = StringVar()
@@ -1873,7 +1874,7 @@ def chama_he():
     input_lado_circulo.grid(row=1, column=0)
 
     botao_circulo = ttk.Button(
-        circulo, text='احسب', command=calcular_circulo)
+        circulo, text='לחשב', command=calcular_circulo)
     botao_circulo.grid(row=2, columnspan=3, pady=5)
 
     resultado_circulo = ttk.Label(circulo, text='', font=('Arial', 16, 'bold'))
@@ -1888,18 +1889,18 @@ def chama_he():
     r_base = StringVar()
     r_altura = StringVar()
 
-    label_base_retangulo = ttk.Label(retangulo, text='القاعد')
+    label_base_retangulo = ttk.Label(retangulo, text='בסיס')
     label_base_retangulo.grid(row=0, column=0)
     input_base_retangulo = ttk.Entry(retangulo, textvariable=r_base, width=16)
     input_base_retangulo.grid(row=1, column=0)
 
-    label_altura_retangulo = ttk.Label(retangulo, text='الارتفاع')
+    label_altura_retangulo = ttk.Label(retangulo, text='גובה')
     label_altura_retangulo.grid(row=2, column=0)
     input_altura_retangulo = ttk.Entry(retangulo, textvariable=r_altura, width=16)
     input_altura_retangulo.grid(row=3, column=0)
 
     botao_retangulo = ttk.Button(
-        retangulo, text='احسب', command=calcular_retangulo)
+        retangulo, text='לחשב', command=calcular_retangulo)
     botao_retangulo.grid(row=4, columnspan=3, pady=5)
 
     resultado_retangulo = ttk.Label(

@@ -5,11 +5,11 @@ Programa que calcula áreas geométricas, traduzido em vários idiomas.
 |Idioma|Status|Idioma|Status|
 |:-|:-:|:-|:-:|
 |Alemão|✅|Inglês|✅|
-|Árabe|❌|Italiano|✅|
+|Árabe|✅|Italiano|✅|
 |Coreano|✅|Japonês|✅|
 |Espanhol|✅|Português|✅|
-|Francês|✅|Mandarim|❌|
-|Hebraico|❌|Russo|❌|
+|Francês|✅|Mandarim|✅|
+|Hebraico|✅|Russo|✅|
 ---
 
 >Créditos  
